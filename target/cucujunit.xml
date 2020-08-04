@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="9.32">
+<testcase classname="Validate Place API" name="Validate if place is being added successfully" time="8.39">
+<system-out><![CDATA[Given Add Place Payload with "Tata House" "English-IN" "Juhu Scheme, Mumbai".passed
+When User calls "addPlaceAPI" with "POST" http request......................passed
+Then The API call got success with status code 200..........................passed
+And "status" in response body is "OK".......................................passed
+And "scope" in response body is "APP".......................................passed
+And validate place_Id created maps to "Tata House" using "getPlaceAPI"......passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate Place API" name="Validate if delete place functionality is working" time="0.363">
+<system-out><![CDATA[Given Delete place payload..................................................passed
+When User calls "deletePlaceAPI" with "POST" http request...................passed
+Then The API call got success with status code 200..........................passed
+And "status" in response body is "OK".......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
